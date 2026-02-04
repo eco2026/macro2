@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macroéconomie II - Cours Complet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #16a085;
+        }
+        h4 {
+            color: #8e44ad;
+        }
+        .section-title {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 40px 0 20px 0;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .formula {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        .highlight {
+            background-color: #e8f4f8;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+        }
+        .exercise-section {
+            background-color: #f9f9f9;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .exercise-title {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .question {
+            background-color: #f0f8ff;
+            padding: 10px;
+            border-left: 4px solid #2980b9;
+            margin: 15px 0;
+        }
+        .solution {
+            background-color: #e8f6f3;
+            padding: 15px;
+            border-left: 4px solid #1abc9c;
+            margin: 15px 0;
+            display: none;
+        }
+        .solution-toggle {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .solution-toggle:hover {
+            background-color: #2980b9;
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            min-width: 120px;
+        }
+        .nav-btn:hover {
+            background-color: #2980b9;
+        }
+        @media print {
+            .navigation, .solution-toggle {
+                display: none;
+            }
+            .solution {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MACRO-ECONOMIE II</h1>
+        <p><strong>FEG / S3</strong></p>
+        <p><strong>Pr. Zakaria BENJOUID</strong></p>
+        <p><strong>UNIVERSITÉ HASSAN 1<sup>ER</sup> - SETTAT FACULTE D'ECONOMIE ET DE GESTION</strong></p>
+        
+        <div class="navigation">
+            <a href="#partie1" class="nav-btn">Partie 1</a>
+            <a href="#partie2" class="nav-btn">Partie 2</a>
+            <a href="#partie3" class="nav-btn">Partie 3</a>
+            <a href="#exercices" class="nav-btn">Exercices</a>
+        </div>
+
+        <!-- PARTIE 1 -->
+        <div class="section-title" id="partie1">Partie 1 : Macroéconomie - Définition et Concepts Fondamentaux</div>
+        
+        <div class="content">
+            <h2>Objectifs du cours</h2>
+            <ul>
+                <li>Appréhender les agrégats macroéconomiques et les méthodes d'analyse qui leur sont liées</li>
+                <li>Comprendre les politiques économiques et leurs conséquences</li>
+                <li>Être capable de déterminer l'équilibre économique</li>
+                <li>Développer la culture économique</li>
+                <li>Développer l'esprit d'analyse économique</li>
+                <li>Comprendre les phénomènes macroéconomiques</li>
+            </ul>
+
+            <h2>Plan du cours</h2>
+            <ol>
+                <li>La macroéconomie: définition et concepts fondamentaux</li>
+                <li>Le modèle Keynésien simplifié</li>
+                <li>L'équilibre macroéconomique: le modèle IS-LM</li>
+            </ol>
+
+            <h2>Chapitre 1: La macroéconomie: définition et concepts fondamentaux</h2>
+            
+            <h3>1. Qu'est-ce que la macroéconomie ?</h3>
+            <div class="highlight">
+                <p>La macroéconomie s'efforce de répondre à ces questions :</p>
+                <ul>
+                    <li>Comment diminuer le chômage ?</li>
+                    <li>Que devraient faire les pouvoirs publics pour relancer la croissance ?</li>
+                    <li>Sommes-nous en récession ?</li>
+                    <li>L'inflation est-elle un problème ?</li>
+                    <li>La banque centrale doit-elle remonter son taux d'intérêt directeur ?</li>
+                </ul>
+            </div>
+
+            <h3>2. Les outils de la macroéconomie</h3>
+            <h4>2.1 La modélisation</h4>
+            <p>Pour expliquer un phénomène, l'économiste peut avoir recours à la modélisation, c'est-à-dire à l'élaboration d'un modèle économique.</p>
+            <div class="highlight">
+                <p><strong>Variables dans un modèle :</strong></p>
+                <ul>
+                    <li><strong>Variables endogènes :</strong> variables que l'on cherche à expliquer, générées par le modèle</li>
+                    <li><strong>Variables exogènes :</strong> variables d'origine extérieure au modèle, que l'on ne cherche pas à expliquer</li>
+                </ul>
+            </div>
+
+            <h3>3. La mesure de la richesse : le produit intérieur brut (PIB)</h3>
+            <h4>3.1 Définition du PIB</h4>
+            <p>Le PIB a deux composantes :</p>
+            <ul>
+                <li>Une composante "marchande" : valeur ajoutée marchande</li>
+                <li>Une composante "non marchande" : services non marchands des administrations publiques</li>
+            </ul>
+            <div class="formula">PIB = PRODUCTION MARCHANDE + PRODUCTION NON MARCHANDE</div>
+
+            <h4>3.2 Mesure du PIB</h4>
+            <p>Trois approches (optiques) :</p>
+            <ol>
+                <li>Approche de la production : PIB = somme des valeurs ajoutées</li>
+                <li>Approche de la demande : PIB = C + I + G + (X - M)</li>
+                <li>Approche des revenus : PIB = somme des revenus des facteurs</li>
+            </ol>
+
+            <h4>3.3 PIB nominal vs PIB réel</h4>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Définition</th>
+                    <th>Mesure</th>
+                </tr>
+                <tr>
+                    <td>PIB nominal</td>
+                    <td>Mesure la valeur en UM de la production</td>
+                    <td>À prix courants</td>
+                </tr>
+                <tr>
+                    <td>PIB réel</td>
+                    <td>Mesure la quantité produite de l'économie</td>
+                    <td>À prix constants</td>
+                </tr>
+            </table>
+
+            <h4>3.4 Déflateur du PIB</h4>
+            <div class="formula">
+                Déflateur du PIB = (PIB nominal / PIB réel) × 100
+            </div>
+
+            <h3>4. Le chômage : définition et concepts associés</h3>
+            <h4>4.1 Définition selon le BIT</h4>
+            <p>Une personne est au chômage si :</p>
+            <ul>
+                <li>Elle est sans emploi</li>
+                <li>Elle est disponible pour travailler dans les deux semaines</li>
+                <li>Elle a entrepris des démarches actives de recherche d'emploi</li>
+            </ul>
+
+            <h4>4.2 Formes du chômage</h4>
+            <ul>
+                <li>Chômage structurel : modification des structures économiques</li>
+                <li>Chômage conjoncturel : chômage temporaire</li>
+                <li>Chômage frictionnel : période intermédiaire entre deux emplois</li>
+                <li>Chômage technologique : remplacement du travail par le capital</li>
+                <li>Chômage volontaire : choix de l'inactivité</li>
+            </ul>
+
+            <div class="formula">
+                Taux de chômage = (Nombre de personnes n'ayant pas d'emploi / Population active) × 100
+            </div>
+
+            <h3>5. Pouvoir d'achat, indice des prix et inflation</h3>
+            <h4>5.1 Pouvoir d'achat</h4>
+            <p>Différence entre l'évolution du revenu des ménages et l'évolution de l'indice des prix.</p>
+
+            <h4>5.2 Indice des prix</h4>
+            <p>Mesure l'évolution du niveau moyen des prix d'un panier fixe de biens et services.</p>
+            <div class="formula">
+                IPC (Indice de Laspeyres) = [Σ(P × Q_base) / Σ(P_base × Q_base)] × 100
+            </div>
+
+            <h4>5.3 Définition de l'inflation</h4>
+            <p>Hausse durable et généralisée du niveau des prix.</p>
+            <div class="highlight">
+                <p><strong>Termes similaires :</strong></p>
+                <ul>
+                    <li><strong>Déflation :</strong> baisse des prix</li>
+                    <li><strong>Désinflation :</strong> ralentissement de la hausse des prix</li>
+                    <li><strong>Stagflation :</strong> croissance faible + inflation élevée</li>
+                    <li><strong>Hyperinflation :</strong> inflation extrêmement élevée</li>
+                </ul>
+            </div>
+
+            <h4>5.4 Types d'inflation</h4>
+            <ul>
+                <li>Inflation rampante : taux faible (1-3%)</li>
+                <li>Inflation galopante : taux à deux ou trois chiffres</li>
+                <li>Inflation ouverte : hausse générale rapide</li>
+            </ul>
+
+            <h4>5.5 Causes de l'inflation</h4>
+            <ul>
+                <li>Inflation par la demande</li>
+                <li>Inflation par les coûts</li>
+                <li>Inflation par la quantité de monnaie</li>
+                <li>Inflation par les structures</li>
+                <li>Inflation importée</li>
+            </ul>
+
+            <h4>5.6 Conséquences de l'inflation</h4>
+            <ul>
+                <li>Diminution du pouvoir d'achat</li>
+                <li>Dépréciation de la monnaie</li>
+                <li>Déséquilibre de la balance commerciale</li>
+                <li>Effets sur les titulaires de revenus fixes</li>
+            </ul>
+        </div>
+
+        <!-- PARTIE 2 -->
+        <div class="section-title" id="partie2">Partie 2 : Le Modèle Keynésien Simplifié</div>
+        
+        <div class="content">
+            <h2>1. John Maynard Keynes</h2>
+            <ul>
+                <li>Économiste anglais (1883-1946)</li>
+                <li>Contexte : Crise de 1929 suivie d'une longue période de dépression économique et de chômage massif</li>
+                <li>Ouvrage principal : "La Théorie générale de l'emploi, de l'intérêt et de la monnaie" (1936)</li>
+            </ul>
+
+            <h3>Thèses principales :</h3>
+            <ul>
+                <li>Seule la demande effective constitue le moteur de la production et de l'emploi</li>
+                <li>Approche intégrationniste de la monnaie</li>
+                <li>Préférence pour la liquidité</li>
+                <li>Liaison entre sphère monétaire et sphère réelle par le taux d'intérêt</li>
+            </ul>
+
+            <h2>2. Hypothèses du modèle</h2>
+            <ul>
+                <li>L'économie est composée de deux types d'agents : entreprises et ménages</li>
+                <li>Les entreprises produisent et investissent</li>
+                <li>Les ménages consomment</li>
+                <li>Les entreprises redistribuent tout leur revenu aux ménages</li>
+            </ul>
+
+            <h2>3. La fonction de consommation</h2>
+            <div class="formula">
+                C = C₀ + bY_d
+            </div>
+            <p>Où :</p>
+            <ul>
+                <li>C : consommation</li>
+                <li>C₀ : consommation incompressible (autonome)</li>
+                <li>b : propension marginale à consommer (0 < b < 1)</li>
+                <li>Y_d : revenu disponible</li>
+            </ul>
+
+            <h3>Propensions à consommer :</h3>
+            <div class="formula">
+                PMC (Propension Moyenne à Consommer) = C / Y<br>
+                pmc (propension marginale à consommer) = ΔC / ΔY = b
+            </div>
+
+            <h3>Loi psychologique fondamentale (Keynes) :</h3>
+            <ol>
+                <li>Le consommateur accroît sa consommation avec l'augmentation du revenu, mais non d'une quantité aussi grande que l'accroissement du revenu (0 < pmc < 1)</li>
+                <li>À mesure que le revenu augmente, une proportion de plus en plus importante est consacrée à l'épargne</li>
+            </ol>
+
+            <h2>4. La fonction d'épargne</h2>
+            <div class="formula">
+                S = Y - C = (1 - b)Y - C₀
+            </div>
+            <p>Où :</p>
+            <ul>
+                <li>S : épargne</li>
+                <li>Y : revenu</li>
+                <li>C : consommation</li>
+            </ul>
+
+            <h3>Propensions à épargner :</h3>
+            <div class="formula">
+                PMS (Propension Moyenne à Épargner) = S / Y = 1 - PMC<br>
+                pms (propension marginale à épargner) = ΔS / ΔY = 1 - b
+            </div>
+
+            <div class="formula">
+                pmc + pms = 1<br>
+                PMC + PMS = 1
+            </div>
+
+            <h2>5. La fonction d'investissement</h2>
+            <h3>5.1 Notion d'investissement</h3>
+            <p>Acte qui consiste à acquérir des biens d'équipement durables destinés à accroître la production de biens et services dans le futur.</p>
+
+            <h3>5.2 Formes d'investissement</h3>
+            <ul>
+                <li>Investissements de renouvellement</li>
+                <li>Investissements de capacité</li>
+                <li>Investissements de modernisation ou de productivité</li>
+            </ul>
+
+            <h3>5.3 Décision d'investir</h3>
+            <h4>Actualisation :</h4>
+            <div class="formula">
+                C₀ = C_n / (1 + i)^n
+            </div>
+
+            <h4>Critère de la Valeur Actuelle Nette (VAN) :</h4>
+            <div class="formula">
+                VAN = Σ[R_t / (1 + i)^t] - I₀
+            </div>
+            <p>Projet acceptable si VAN > 0</p>
+
+            <h4>Critère du Taux de Rendement Interne (TRI) :</h4>
+            <div class="formula">
+                Σ[R_t / (1 + e)^t] - I₀ = 0
+            </div>
+            <p>Où e = efficacité marginale du capital</p>
+            <p>Investir si e > i (taux d'intérêt du marché)</p>
+
+            <h4>Fonction d'investissement :</h4>
+            <div class="formula">
+                I = I₀ - d·i
+            </div>
+            <p>Relation négative entre investissement et taux d'intérêt</p>
+
+            <h3>5.4 Principe d'accélération</h3>
+            <div class="formula">
+                I_n = a·ΔY
+            </div>
+            <p>Où a = coefficient d'accélération (a > 1)</p>
+
+            <h3>5.5 Principe du multiplicateur</h3>
+            <h4>Multiplicateur statique :</h4>
+            <div class="formula">
+                k = ΔY / ΔI = 1 / (1 - b) = 1 / s
+            </div>
+
+            <h4>Multiplicateur dynamique :</h4>
+            <p>Considère les périodes successives :</p>
+            <div class="formula">
+                ΔY = ΔI × [1 + b + b² + b³ + ...] = ΔI / (1 - b)
+            </div>
+
+            <div class="highlight">
+                <p><strong>Exemple :</strong> Si b = 0,6, alors k = 1 / (1 - 0,6) = 2,5</p>
+                <p>Un investissement supplémentaire de 10 millions → ΔY = 10 × 2,5 = 25 millions</p>
+            </div>
+        </div>
+
+        <!-- PARTIE 3 -->
+        <div class="section-title" id="partie3">Partie 3 : L'Équilibre Macroéconomique - Le Modèle IS-LM</div>
+        
+        <div class="content">
+            <h2>1. L'équilibre du revenu national</h2>
+            
+            <h3>A. L'équilibre macroéconomique de sous-emploi</h3>
+            <p>Pour J.M. Keynes : Même si l'économie est en équilibre, celui-ci peut coexister avec un déséquilibre en matière d'emploi (chômage).</p>
+
+            <h3>B. Les dépenses publiques (G)</h3>
+            <p>Les dépenses publiques sont un outil de régulation qui permet de renforcer la demande effective.</p>
+            <div class="formula">
+                Y = C + I₀ + G₀
+            </div>
+            <div class="formula">
+                ΔY = k·ΔG = [1 / (1 - b)]·ΔG
+            </div>
+
+            <h3>C. Introductions des échanges extérieurs</h3>
+            <div class="formula">
+                C + I₀ + G₀ + X = C + S + T + M<br>
+                ⇒ I₀ + G₀ + X = S + T + M
+            </div>
+
+            <h4>Effet des exportations :</h4>
+            <div class="formula">
+                Y = [1 / (1 - b)]·(C₀ + I₀ + G₀ + X - M)
+            </div>
+
+            <h4>Importations fonction du revenu :</h4>
+            <div class="formula">
+                M = M₀ + mY
+            </div>
+            <div class="formula">
+                Y = [1 / (1 - b + m)]·(C₀ + I₀ + G₀ + X - M₀)
+            </div>
+
+            <h2>2. L'équilibre sur le marché de biens & service : la courbe IS</h2>
+            
+            <h3>Définition :</h3>
+            <p>La courbe IS représente l'ensemble des combinaisons de taux d'intérêt (i) et de revenus (Y) qui assurent l'équilibre sur le marché des biens et des services.</p>
+
+            <h3>Équation de la courbe IS :</h3>
+            <div class="formula">
+                Y = C(Y) + I(i) + G
+            </div>
+            <p>Où :</p>
+            <ul>
+                <li>C(Y) = C₀ + bY (fonction consommation)</li>
+                <li>I(i) = I₀ - d·i (fonction investissement)</li>
+                <li>G = dépenses publiques (exogène)</li>
+            </ul>
+
+            <h3>Condition d'équilibre :</h3>
+            <div class="formula">
+                S(Y) = I(i)
+            </div>
+
+            <h3>Propriétés :</h3>
+            <ul>
+                <li>La courbe IS est décroissante : i ↑ → I ↓ → Y ↓</li>
+                <li>Pente dépend de la sensibilité de I à i et de la propension marginale à consommer</li>
+            </ul>
+
+            <div class="highlight">
+                <p><strong>Exemple :</strong> C = 80 + 0,6Y ; I = 120 - 5i ; G = 100</p>
+                <div class="formula">IS : Y = 750 - 12,5i</div>
+            </div>
+
+            <h2>3. L'équilibre sur le marché de la monnaie : la courbe LM</h2>
+            
+            <h3>A. Définition de la monnaie</h3>
+            <p>Selon Perroux : "La monnaie est un instrument de paiement indéterminé, général et immédiat."</p>
+
+            <h4>Fonctions de la monnaie :</h4>
+            <ul>
+                <li>Instrument de mesure de la valeur</li>
+                <li>Moyen de règlement</li>
+                <li>Moyen de réserve de valeur</li>
+            </ul>
+
+            <h3>B. Demande de monnaie (Keynes)</h3>
+            <h4>Motifs de détention :</h4>
+            <ul>
+                <li><strong>Motif de transaction :</strong> L₁ = f(Y) croissante</li>
+                <li><strong>Motif de précaution :</strong> L₁ = f(Y) croissante</li>
+                <li><strong>Motif de spéculation :</strong> L₂ = f(i) décroissante</li>
+            </ul>
+
+            <div class="formula">
+                L(Y, i) = L₁(Y) + L₂(i)
+            </div>
+
+            <h3>C. Offre de monnaie (M)</h3>
+            <p>Contrôlée par la banque centrale (variable exogène).</p>
+
+            <h3>D. Équation de la courbe LM</h3>
+            <div class="formula">
+                M / P = L(Y, i)
+            </div>
+            <p>La courbe LM représente l'ensemble des combinaisons de taux d'intérêt (i) et de revenu (Y) qui assurent l'équilibre sur le marché monétaire.</p>
+
+            <h3>Propriétés :</h3>
+            <ul>
+                <li>La courbe LM est croissante : Y ↑ → L₁ ↑ → i ↑ (si M constante)</li>
+            </ul>
+
+            <div class="highlight">
+                <p><strong>Exemple :</strong> L = 0,5Y - 10i ; M/P = 100</p>
+                <div class="formula">LM : 100 = 0,5Y - 10i → Y = 200 + 20i</div>
+            </div>
+
+            <h2>4. L'équilibre macroéconomique : le modèle IS-LM</h2>
+            
+            <h3>Définition :</h3>
+            <p>Modèle qui détermine simultanément l'équilibre sur le marché des biens (IS) et le marché monétaire (LM).</p>
+
+            <h3>Système d'équations :</h3>
+            <div class="formula">
+                IS : Y = C(Y - T) + I(i) + G<br>
+                LM : M/P = L(Y, i)
+            </div>
+
+            <h3>Point d'équilibre (Y*, i*) :</h3>
+            <p>Intersection des courbes IS et LM.</p>
+
+            <div class="highlight">
+                <p><strong>Exemple de résolution :</strong> IS : Y = 800 - 20i ; LM : Y = 100 + 40i</p>
+                <div class="formula">
+                    800 - 20i = 100 + 40i<br>
+                    700 = 60i<br>
+                    i* = 11,67<br>
+                    Y* = 800 - 20×11,67 = 566,6
+                </div>
+            </div>
+
+            <h3>Interprétation économique :</h3>
+            <ul>
+                <li>Politique budgétaire (G, T) → déplace la courbe IS</li>
+                <li>Politique monétaire (M) → déplace la courbe LM</li>
+                <li>Le modèle permet d'analyser les effets conjoints des politiques économiques sur Y et i</li>
+            </ul>
+        </div>
+
+        <!-- SECTION EXERCICES -->
+        <div class="section-title" id="exercices">Exercices et Solutions</div>
+
+        <div class="exercise-section">
+            <div class="exercise-title">Exercices sur la Partie 1 : Concepts Fondamentaux</div>
+
+            <!-- Exercice 1 -->
+            <div class="question">
+                <h4>Exercice 1 : Calcul du PIB</h4>
+                <p>Soit une économie avec les données suivantes pour l'année 2023 (en millions de DH) :</p>
+                <ul>
+                    <li>Consommation finale des ménages : 450</li>
+                    <li>Formation brute de capital fixe : 180</li>
+                    <li>Variation des stocks : 20</li>
+                    <li>Dépenses publiques : 150</li>
+                    <li>Exportations : 120</li>
+                    <li>Importations : 100</li>
+                    <li>Subventions sur les produits : 15</li>
+                    <li>Impôts sur les produits : 40</li>
+                </ul>
+                <p><strong>Questions :</strong></p>
+                <ol>
+                    <li>Calculez le PIB selon l'approche dépenses</li>
+                    <li>Calculez le PIB aux prix du marché</li>
+                </ol>
+            </div>
+
+            <button class="solution-toggle" onclick="toggleSolution('sol1')">Voir la solution</button>
+            
+            <div class="solution" id="sol1">
+                <h4>Solution de l'Exercice 1 :</h4>
+                <p><strong>1. PIB selon l'approche dépenses :</strong></p>
+                <div class="formula">
+                    PIB = C + I + G + (X - M)<br>
+                    Où I = FBCF + Variation des stocks<br>
+                    I = 180 + 20 = 200<br>
+                    PIB = 450 + 200 + 150 + (120 - 100)<br>
+                    PIB = 450 + 200 + 150 + 20<br>
+                    <strong>PIB = 820 millions de DH</strong>
+                </div>
+                
+                <p><strong>2. PIB aux prix du marché :</strong></p>
+                <div class="formula">
+                    PIB aux prix du marché = PIB + Impôts sur les produits - Subventions<br>
+                    PIBpm = 820 + 40 - 15<br>
+                    <strong>PIBpm = 845 millions de DH</strong>
+                </div>
+            </div>
+
+            <!-- Exercice 2 -->
+            <div class="question">
+                <h4>Exercice 2 : Taux d'inflation et pouvoir d'achat</h4>
+                <p>Un salarié gagnait 8 000 DH par mois en 2022. En 2023, son salaire nominal est augmenté à 8 500 DH.</p>
+                <p>L'IPC (base 2022 = 100) était de 100 en 2022 et de 107 en 2023.</p>
+                <p><strong>Questions :</strong></p>
+                <ol>
+                    <li>Calculez le taux d'inflation entre 2022 et 2023</li>
+                    <li>Calculez le salaire réel en 2023 (en DH de 2022)</li>
+                    <li>Calculez la variation du pouvoir d'achat du salarié</li>
+                </ol>
+            </div>
+
+            <button class="solution-toggle" onclick="toggleSolution('sol2')">Voir la solution</button>
+            
+            <div class="solution" id="sol2">
+                <h4>Solution de l'Exercice 2 :</h4>
+                <p><strong>1. Taux d'inflation :</strong></p>
+                <div class="formula">
+                    Taux d'inflation = [(IPC2023 - IPC2022) / IPC2022] × 100<br>
+                    Taux d'inflation = [(107 - 100) / 100] × 100<br>
+                    <strong>Taux d'inflation = 7%</strong>
+                </div>
+                
+                <p><strong>2. Salaire réel en 2023 :</strong></p>
+                <div class="formula">
+                    Salaire réel = Salaire nominal / (IPC / 100)<br>
+                    Salaire réel2023 = 8 500 / (107 / 100)<br>
+                    Salaire réel2023 = 8 500 / 1,07<br>
+                    <strong>Salaire réel2023 = 7 943,93 DH</strong>
+                </div>
+                
+                <p><strong>3. Variation du pouvoir d'achat :</strong></p>
+                <div class="formula">
+                    Variation = [(Salaire réel2023 - Salaire nominal2022) / Salaire nominal2022] × 100<br>
+                    Variation = [(7 943,93 - 8 000) / 8 000] × 100<br>
+                    Variation = (-56,07 / 8 000) × 100<br>
+                    <strong>Variation = -0,7%</strong>
+                </div>
+                <p><strong>Interprétation :</strong> Malgré une augmentation nominale de 500 DH, le pouvoir d'achat du salarié a diminué de 0,7% à cause de l'inflation.</p>
+            </div>
+        </div>
+
+        <div class="exercise-section">
+            <div class="exercise-title">Exercices sur la Partie 2 : Modèle Keynésien</div>
+
+            <!-- Exercice 3 -->
+            <div class="question">
+                <h4>Exercice 3 : Fonctions de consommation et d'épargne</h4>
+                <p>Soit la fonction de consommation : C = 100 + 0,75Y</p>
+                <p>Où Y est le revenu disponible.</p>
+                <p><strong>Questions :</strong></p>
+                <ol>
+                    <li>Que représente 100 et 0,75 ?</li>
+                    <li>Calculez la consommation pour Y = 800</li>
+                    <li>Déterminez la fonction d'épargne</li>
+                    <li>Calculez l'épargne pour Y = 800</li>
+                    <li>Calculez la PMC et la pmc pour Y = 800</li>
+                    <li>Calculez la PMS et la pms</li>
+                </ol>
+            </div>
+
+            <button class="solution-toggle" onclick="toggleSolution('sol3')">Voir la solution</button>
+            
+            <div class="solution" id="sol3">
+                <h4>Solution de l'Exercice 3 :</h4>
+                <p><strong>1. Interprétation des paramètres :</strong></p>
+                <ul>
+                    <li>100 : consommation autonome (C₀) - consommation même avec revenu nul</li>
+                    <li>0,75 : propension marginale à consommer (b) - 75% d'un revenu additionnel est consommé</li>
+                </ul>
+                
+                <p><strong>2. Consommation pour Y = 800 :</strong></p>
+                <div class="formula">
+                    C = 100 + 0,75 × 800<br>
+                    C = 100 + 600<br>
+                    <strong>C = 700</strong>
+                </div>
+                
+                <p><strong>3. Fonction d'épargne :</strong></p>
+                <div class="formula">
+                    S = Y - C<br>
+                    S = Y - (100 + 0,75Y)<br>
+                    S = Y - 100 - 0,75Y<br>
+                    <strong>S = -100 + 0,25Y</strong>
+                </div>
+                
+                <p><strong>4. Épargne pour Y = 800 :</strong></p>
+                <div class="formula">
+                    S = -100 + 0,25 × 800<br>
+                    S = -100 + 200<br>
+                    <strong>S = 100</strong>
+                </div>
+                
+                <p><strong>5. PMC et pmc :</strong></p>
+                <div class="formula">
+                    PMC = C / Y = 700 / 800 = <strong>0,875</strong><br>
+                    pmc = b = <strong>0,75</strong>
+                </div>
+                
+                <p><strong>6. PMS et pms :</strong></p>
+                <div class="formula">
+                    PMS = S / Y = 100 / 800 = <strong>0,125</strong><br>
+                    pms = 1 - b = 1 - 0,75 = <strong>0,25</strong>
+                </div>
+            </div>
+
+            <!-- Exercice 4 -->
+            <div class="question">
+                <h4>Exercice 4 : Multiplicateur d'investissement</h4>
+                <p>Dans une économie, la fonction de consommation est : C = 50 + 0,8Y</p>
+                <p>L'investissement initial est I₀ = 100.</p>
+                <p><strong>Questions :</strong></p>
+                <ol>
+                    <li>Calculez le multiplicateur d'investissement</li>
+                    <li>Calculez le revenu d'équilibre initial</li>
+                    <li>Si l'investissement augmente de 50, calculez le nouveau revenu d'équilibre</li>
+                    <li>Vérifiez l'effet multiplicateur</li>
+                </ol>
+            </div>
+
+            <button class="solution-toggle" onclick="toggleSolution('sol4')">Voir la solution</button>
+            
+            <div class="solution" id="sol4">
+                <h4>Solution de l'Exercice 4 :</h4>
+                <p><strong>1. Multiplicateur d'investissement :</strong></p>
+                <div class="formula">
+                    k = 1 / (1 - b) = 1 / (1 - 0,8)<br>
+                    k = 1 / 0,2<br>
+                    <strong>k = 5</strong>
+                </div>
+                
+                <p><strong>2. Revenu d'équilibre initial :</strong></p>
+                <div class="formula">
+                    Y = C + I<br>
+                    Y = (50 + 0,8Y) + 100<br>
+                    Y - 0,8Y = 150<br>
+                    0,2Y = 150<br>
+                    <strong>Y = 750</strong>
+                </div>
+                
+                <p><strong>3. Nouveau revenu d'équilibre (ΔI = 50) :</strong></p>
+                <div class="formula">
+                    ΔY = k × ΔI = 5 × 50 = 250<br>
+                    Nouveau Y = 750 + 250 = <strong>1 000</strong>
+                </div>
+                
+                <p><strong>4. Vérification :</strong></p>
+                <div class="formula">
+                    Avec I = 150 (100 + 50)<br>
+                    Y = (50 + 0,8Y) + 150<br>
+                    Y - 0,8Y = 200<br>
+                    0,2Y = 200<br>
+                    Y = 1 000 ✓
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise-section">
+            <div class="exercise-title">Exercices sur la Partie 3 : Modèle IS-LM</div>
+
+            <!-- Exercice 5 -->
+            <div class="question">
+                <h4>Exercice 5 : Détermination des courbes IS et LM</h4>
+                <p>Soit une économie caractérisée par :</p>
+                <ul>
+                    <li>Fonction de consommation : C = 100 + 0,6Y</li>
+                    <li>Fonction d'investissement : I = 150 - 10i</li>
+                    <li>Dépenses publiques : G = 200</li>
+                    <li>Fonction de demande de monnaie : L = 0,5Y - 20i</li>
+                    <li>Offre de monnaie réelle : M/P = 300</li>
+                </ul>
+                <p><strong>Questions :</strong></p>
+                <ol>
+                    <li>Déterminez l'équation de la courbe IS</li>
+                    <li>Déterminez l'équation de la courbe LM</li>
+                    <li>Calculez le revenu et le taux d'intérêt d'équilibre</li>
+                </ol>
+            </div>
+
+            <button class="solution-toggle" onclick="toggleSolution('sol5')">Voir la solution</button>
+            
+            <div class="solution" id="sol5">
+                <h4>Solution de l'Exercice 5 :</h4>
+                <p><strong>1. Équation de la courbe IS :</strong></p>
+                <div class="formula">
+                    Y = C + I + G<br>
+                    Y = (100 + 0,6Y) + (150 - 10i) + 200<br>
+                    Y = 450 + 0,6Y - 10i<br>
+                    Y - 0,6Y = 450 - 10i<br>
+                    0,4Y = 450 - 10i<br>
+                    <strong>Y = 1 125 - 25i (Équation IS)</strong>
+                </div>
+                
+                <p><strong>2. Équation de la courbe LM :</strong></p>
+                <div class="formula">
+                    M/P = L<br>
+                    300 = 0,5Y - 20i<br>
+                    0,5Y = 300 + 20i<br>
+                    <strong>Y = 600 + 40i (Équation LM)</strong>
+                </div>
+                
+                <p><strong>3. Équilibre IS-LM :</strong></p>
+                <div class="formula">
+                    IS : Y = 1 125 - 25i<br>
+                    LM : Y = 600 + 40i<br>
+                    <br>
+                    1 125 - 25i = 600 + 40i<br>
+                    1 125 - 600 = 40i + 25i<br>
+                    525 = 65i<br>
+                    <strong>i* = 8,08%</strong><br>
+                    <br>
+                    Y* = 600 + 40 × 8,08<br>
+                    Y* = 600 + 323,2<br>
+                    <strong>Y* = 923,2</strong>
+                </div>
+            </div>
+
+            <!-- Exercice 6 -->
+            <div class="question">
+                <h4>Exercice 6 : Politique budgétaire dans le modèle IS-LM</h4>
+                <p>Reprenons l'économie de l'exercice 5 avec :</p>
+                <ul>
+                    <li>IS : Y = 1 125 - 25i</li>
+                    <li>LM : Y = 600 + 40i</li>
+                    <li>Équilibre initial : Y* = 923,2, i* = 8,08%</li>
+                </ul>
+                <p>Le gouvernement décide d'augmenter les dépenses publiques de 50.</p>
+                <p><strong>Questions :</strong></p>
+                <ol>
+                    <li>Déterminez la nouvelle équation IS</li>
+                    <li>Calculez le nouvel équilibre (Y*, i*)</li>
+                    <li>Analysez l'effet d'éviction</li>
+                </ol>
+            </div>
+
+            <button class="solution-toggle" onclick="toggleSolution('sol6')">Voir la solution</button>
+            
+            <div class="solution" id="sol6">
+                <h4>Solution de l'Exercice 6 :</h4>
+                <p><strong>1. Nouvelle équation IS (ΔG = 50) :</strong></p>
+                <div class="formula">
+                    Multiplicateur = 1/(1-0,6) = 2,5<br>
+                    ΔY (sans effet monétaire) = 2,5 × 50 = 125<br>
+                    <br>
+                    Nouvelle IS : déplacement vers la droite<br>
+                    IS initiale : Y = 1 125 - 25i<br>
+                    Nouvelle IS : Y = (1 125 + 125) - 25i<br>
+                    <strong>Nouvelle IS : Y = 1 250 - 25i</strong>
+                </div>
+                
+                <p><strong>2. Nouvel équilibre :</strong></p>
+                <div class="formula">
+                    Nouvelle IS : Y = 1 250 - 25i<br>
+                    LM : Y = 600 + 40i<br>
+                    <br>
+                    1 250 - 25i = 600 + 40i<br>
+                    650 = 65i<br>
+                    <strong>i* = 10%</strong><br>
+                    <br>
+                    Y* = 600 + 40 × 10<br>
+                    <strong>Y* = 1 000</strong>
+                </div>
+                
+                <p><strong>3. Effet d'éviction :</strong></p>
+                <div class="formula">
+                    Variation totale de Y = 1 000 - 923,2 = 76,8<br>
+                    Variation attendue sans effet monétaire = 125<br>
+                    Effet d'éviction = 125 - 76,8 = 48,2
+                </div>
+                <p><strong>Interprétation :</strong> L'augmentation des dépenses publiques a provoqué une hausse du taux d'intérêt (de 8,08% à 10%), ce qui a réduit l'investissement privé. L'effet multiplicateur est donc partiellement compensé par l'effet d'éviction.</p>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="#partie1" class="nav-btn">Retour Partie 1</a>
+            <a href="#partie2" class="nav-btn">Retour Partie 2</a>
+            <a href="#partie3" class="nav-btn">Retour Partie 3</a>
+            <a href="#exercices" class="nav-btn">Retour Exercices</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            if (solution.style.display === 'block') {
+                solution.style.display = 'none';
+            } else {
+                solution.style.display = 'block';
+            }
+        }
+        
+        // Pour l'impression, afficher toutes les solutions
+        window.addEventListener('beforeprint', () => {
+            const solutions = document.querySelectorAll('.solution');
+            solutions.forEach(solution => {
+                solution.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
